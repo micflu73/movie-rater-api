@@ -54,6 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# https://github.com/adamchainz/django-cors-headers
 # open API for any domain > not recommended!!!
 # CORS_ORIGIN_ALLOW_ALL = True
 # list of trusted domains
