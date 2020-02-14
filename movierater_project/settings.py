@@ -39,17 +39,26 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
     'movierater_api',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+# open API for any domain > not recommended!!!
+# CORS_ORIGIN_ALLOW_ALL = True
+# list of trusted domains
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3000" #host of React web frontend
 ]
 
 ROOT_URLCONF = 'movierater_project.urls'
